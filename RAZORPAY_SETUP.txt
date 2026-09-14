@@ -1,0 +1,22 @@
+GK FASHION - RAZORPAY UPI SETUP
+
+1. Open the official Razorpay UPI Intent Android documentation:
+https://razorpay.com/docs/payments/payment-methods/upi/upi-intent/
+
+2. Download the official "razorpay-upi-intent-sdk.jar" from the Download the jar file link.
+
+3. Put that JAR inside:
+app/libs/
+
+4. In MainActivity.java change:
+YOUR_RAZORPAY_KEY_ID
+
+to your Razorpay Key ID (rzp_test_... or rzp_live_...).
+
+NEVER put your Razorpay Key Secret in this project.
+
+Razorpay documentation says WebView UPI Intent uses:
+Razorpay(key, webView, activity)
+and the UPI result is passed back in onActivityResult.
+
+The base project intentionally uses reflection for this optional JAR so the project can still open before the JAR is copied.

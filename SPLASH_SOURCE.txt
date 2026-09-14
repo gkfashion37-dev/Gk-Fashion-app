@@ -1,0 +1,1 @@
+Splash screen generated from the supplied GK logo reference and included as app/src/main/res/drawable/splash_screen.png.

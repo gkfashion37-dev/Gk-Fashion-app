@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.gkfashion.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.gkfashion.app'
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.17.0'
+    // Official Razorpay Android Standard SDK. The WebView UPI Intent SDK
+    // JAR is documented separately by Razorpay and belongs in app/libs.
+    implementation 'com.razorpay:checkout:1.6.40'
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+}
